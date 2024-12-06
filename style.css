@@ -1,0 +1,75 @@
+:root {
+    --background: #282828;
+    --dark-orange: #FF8C00;
+    --orange: #FFA500;
+    --light-orange: #FFDAB9;
+    --dark-gray: #2F2F2F;
+    --light-gray: #D3D3D3;
+    --gray: #928374; /* Gruvbox gray */
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--background);
+    color: var(--light-gray);
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    background-color: var(--dark-gray);
+    color: var(--light-gray);
+}
+
+.navbar {
+    display: flex;
+    justify-content: center;
+    padding: 1rem;
+}
+
+.navbar ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.navbar li {
+    margin: 0 1rem;
+}
+
+.navbar a {
+    color: var(--gray); /* Changed text color to gray */
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.navbar a:hover {
+    color: var(--orange);
+}
+
+main {
+    flex: 1;
+    padding-top: 60px; /* Adjust this value if needed */
+}
+
+section {
+    padding: 2rem;
+    border-bottom: 1px solid var(--dark-gray);
+}
+
+footer {
+    text-align: center;
+    padding: 1rem;
+    background-color: var(--dark-gray);
+    color: var(--light-gray);
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
