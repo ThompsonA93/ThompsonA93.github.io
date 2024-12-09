@@ -12,10 +12,14 @@
         <nav class="navbar">
             <ul>
                 <li><a href="#" onclick="loadPage('src/about.html')">About</a></li>
-                <li><a href="#" onclick="loadPage('src/work.html')">Work</a></li>
-                <li><a href="#" onclick="loadPage('src/education.html')">Education</a></li>
+                <li><a href="#" onclick="loadPage('src/services.html')">Services</a></li>
                 <li><a href="#" onclick="loadPage('src/projects.html')">Projects</a></li>
                 <li><a href="#" onclick="loadPage('src/contact.html')">Contact</a></li>
+                <hr class="navbar-divider">
+                <div class="navbar-buttons">
+                    <button id="toggle-mode" onclick="toggleMode()">🌞</button>
+                    <button id="toggle-language" onclick="toggleLanguage()">🇬🇧</button>
+                </div>
             </ul>
         </nav>
     </header>
@@ -23,10 +27,6 @@
     <main id="content">
         <!-- Content will be loaded here -->
     </main>
-
-    <footer>
-        
-    </footer>
 
     <script src="script.js"></script>
 </body>
