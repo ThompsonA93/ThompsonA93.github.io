@@ -1,17 +1,27 @@
+@keyframes shimmer {
+    0% {
+        background-position: -100%;
+    }
+
+    100% {
+        background-position: 100%;
+    }
+}
+
 :root {
-    --background-light: #f2e9e4; /* Light background */
-    --text-light: #22223b; /* Dark text */
-    --primary-light: #4a4e69; /* Primary color */
-    --secondary-light: #9a8c98; /* Secondary color */
-    --border-light: #c9ada7; /* Border color */
+    --background-light: #f2e9e4;
+    --text-light: #22223b;
+    --primary-light: #4a4e69;
+    --secondary-light: #9a8c98;
+    --border-light: #c9ada7;
 
-    --background-dark: #22223b; /* Dark background */
-    --text-dark: #f2e9e4; /* Light text */
-    --primary-dark: #c9ada7; /* Primary color for dark mode */
-    --secondary-dark: #9a8c98; /* Secondary color for dark mode */
-    --border-dark: #4a4e69; /* Border color for dark mode */
+    --background-dark: #22223b;
+    --text-dark: #f2e9e4;
+    --primary-dark: #c9ada7;
+    --secondary-dark: #9a8c98;
+    --border-dark: #4a4e69;
 
-    --transition-duration: 0.3s; /* Transition duration */
+    --transition-duration: 0.3s;
 }
 
 body {
@@ -21,6 +31,8 @@ body {
     background-color: var(--background-light);
     color: var(--text-light);
     display: flex;
+    flex-direction: column;
+    min-height: 100vh;
     transition: background-color var(--transition-duration), color var(--transition-duration);
 }
 
@@ -45,6 +57,22 @@ header {
 body.dark-mode header {
     background-color: var(--background-dark);
     color: var(--text-dark);
+    border-color: var(--border-dark);
+}
+
+main {
+    flex: 1;
+    margin-left: 200px;
+    padding: 2rem;
+}
+
+section {
+    padding: 2rem;
+    border-bottom: 1px solid var(--border-light);
+    transition: border-color var(--transition-duration);
+}
+
+body.dark-mode section {
     border-color: var(--border-dark);
 }
 
@@ -90,10 +118,11 @@ body.dark-mode .navbar a:hover {
 
 .navbar-buttons {
     display: flex;
-    gap: 0.2rem; /* Reduced gap between buttons */
+    gap: 0.2rem;
 }
 
-#toggle-mode, #toggle-language {
+#toggle-mode,
+#toggle-language {
     background: none;
     border: none;
     color: inherit;
@@ -124,11 +153,20 @@ body.dark-mode .navbar-divider {
     text-align: center;
     font-size: 2rem;
     font-weight: bold;
-    margin-bottom: 2rem;
-    border-radius: 25px; /* Added border-radius for rounded corners */
+    margin: 2rem;
+    border-radius: 25px;
+    background: linear-gradient(90deg, var(--secondary-light), var(--primary-light), var(--border-light), var(--secondary-light));
+    background-size: 400%;
+    animation: shimmer 42s both infinite alternate;
     transition: background-color var(--transition-duration), color var(--transition-duration);
     position: relative;
     overflow: hidden;
+}
+
+body.dark-mode .banner {
+    background: linear-gradient(90deg, var(--secondary-dark), var(--primary-dark), var(--border-dark), var(--secondary-dark));
+    background-size: 400%;
+    color: var(--text-dark);
 }
 
 .banner::before {
@@ -148,52 +186,68 @@ body.dark-mode .navbar-divider {
     transition: left 0.5s;
 }
 
-.banner-about {
-    background-color: var(--primary-light);
+#repos {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
 }
 
-body.dark-mode .banner-about {
-    background-color: var(--primary-dark);
+#repos div {
+    color: var(--text-light);
+    border: 1px solid var(--text-light);
+    padding: 10px;
+    border-radius: 5px;
+    transition: background-color var(--transition-duration), color var(--transition-duration), border-color var(--transition-duration);
 }
 
-.banner-contact {
-    background-color: var(--secondary-light);
+body.dark-mode #repos div {
+    color: var(--text-dark);
+    border: 1px solid var(--text-dark);
 }
 
-body.dark-mode .banner-contact {
-    background-color: var(--secondary-dark);
+#repos h3 {
+    margin: 0;
 }
 
-.banner-projects {
-    background-color: var(--border-light);
+#repos p {
+    margin: 5px 0 0;
 }
 
-body.dark-mode .banner-projects {
-    background-color: var(--border-dark);
+.repo-details {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
 }
 
-.banner-services {
-    background-color: var(--text-light);
-    color: var(--background-light);
+.repo-language {
+    text-align: left;
 }
 
-body.dark-mode .banner-services {
-    background-color: var(--text-dark);
-    color: var(--background-dark);
+.repo-stars {
+    text-align: right;
 }
 
-main {
-    flex: 1;
-    margin-left: 200px;
-    padding: 2rem;
+footer {
+    background-color: var(--background-light);
+    color: var(--text-light);
+    padding: 20px 0;
+    text-align: center;
+    margin-top: auto;
+    width: 100%;
+    transition: background-color var(--transition-duration), color var(--transition-duration);
 }
 
-section {
-    padding: 2rem;
-    border-bottom: 1px solid var(--border-light);
-    transition: border-color var(--transition-duration);
+body.dark-mode footer {
+    background-color: var(--background-dark);
+    color: var(--text-dark);
 }
 
-body.dark-mode section {
-    border-color: var(--border-dark);
+.social-badges {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.social-badges img {
+    height: 30px;
 }
