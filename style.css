@@ -1,253 +1,27 @@
-@keyframes shimmer {
-    0% {
-        background-position: -100%;
-    }
-
-    100% {
-        background-position: 100%;
-    }
+/* Add a black background color to the top navigation */
+.topnav {
+  background-color: #333;
+  overflow: hidden;
 }
 
-:root {
-    --background-light: #f2e9e4;
-    --text-light: #22223b;
-    --primary-light: #4a4e69;
-    --secondary-light: #9a8c98;
-    --border-light: #c9ada7;
-
-    --background-dark: #22223b;
-    --text-dark: #f2e9e4;
-    --primary-dark: #c9ada7;
-    --secondary-dark: #9a8c98;
-    --border-dark: #4a4e69;
-
-    --transition-duration: 0.3s;
+/* Style the links inside the navigation bar */
+.topnav a {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
 }
 
-body {
-    font-family: 'Courier New', Courier, monospace, 'Arial', sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: var(--background-light);
-    color: var(--text-light);
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-    transition: background-color var(--transition-duration), color var(--transition-duration);
+/* Change the color of links on hover */
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
 }
 
-body.dark-mode {
-    background-color: var(--background-dark);
-    color: var(--text-dark);
-}
-
-header {
-    position: fixed;
-    height: 100%;
-    width: 200px;
-    background-color: var(--background-light);
-    color: var(--text-light);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-right: 2px solid var(--border-light);
-    transition: background-color var(--transition-duration), color var(--transition-duration), border-color var(--transition-duration);
-}
-
-body.dark-mode header {
-    background-color: var(--background-dark);
-    color: var(--text-dark);
-    border-color: var(--border-dark);
-}
-
-main {
-    flex: 1;
-    margin-left: 200px;
-    padding: 2rem;
-}
-
-section {
-    padding: 2rem;
-    border-bottom: 1px solid var(--border-light);
-    transition: border-color var(--transition-duration);
-}
-
-body.dark-mode section {
-    border-color: var(--border-dark);
-}
-
-.navbar {
-    display: flex;
-    flex-direction: column;
-    padding: 1rem;
-    height: 100%;
-    justify-content: center;
-}
-
-.navbar ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-}
-
-.navbar li {
-    margin: 1rem 0;
-}
-
-.navbar a {
-    color: var(--primary-light);
-    text-decoration: none;
-    font-weight: bold;
-    transition: color var(--transition-duration);
-}
-
-body.dark-mode .navbar a {
-    color: var(--primary-dark);
-}
-
-.navbar a:hover {
-    color: var(--secondary-light);
-}
-
-body.dark-mode .navbar a:hover {
-    color: var(--secondary-dark);
-}
-
-.navbar-buttons {
-    display: flex;
-    gap: 0.2rem;
-}
-
-#toggle-mode,
-#toggle-language {
-    background: none;
-    border: none;
-    color: inherit;
-    font-size: 1.5rem;
-    cursor: pointer;
-    transition: color var(--transition-duration);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.navbar-divider {
-    width: 100%;
-    border: 0;
-    border-top: 1px solid var(--border-light);
-    margin: 1rem 0;
-    transition: border-color var(--transition-duration);
-}
-
-body.dark-mode .navbar-divider {
-    border-color: var(--border-dark);
-}
-
-.banner {
-    width: 100%;
-    padding: 2rem;
-    color: var(--text-dark);
-    text-align: center;
-    font-size: 2rem;
-    font-weight: bold;
-    margin: 2rem;
-    border-radius: 25px;
-    background: linear-gradient(90deg, var(--secondary-light), var(--primary-light), var(--border-light), var(--secondary-light));
-    background-size: 400%;
-    animation: shimmer 42s both infinite alternate;
-    transition: background-color var(--transition-duration), color var(--transition-duration);
-    position: relative;
-    overflow: hidden;
-}
-
-body.dark-mode .banner {
-    background: linear-gradient(90deg, var(--secondary-dark), var(--primary-dark), var(--border-dark), var(--secondary-dark));
-    background-size: 400%;
-    color: var(--text-dark);
-}
-
-.banner::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: -75%;
-    width: 50%;
-    height: 100%;
-    background: rgba(255, 255, 255, 0.2);
-    transform: skewX(-25deg);
-    transition: left 0.5s;
-}
-
-.banner:hover::before {
-    left: 125%;
-    transition: left 0.5s;
-}
-
-#repos {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-}
-
-#repos div {
-    color: var(--text-light);
-    border: 1px solid var(--text-light);
-    padding: 10px;
-    border-radius: 5px;
-    transition: background-color var(--transition-duration), color var(--transition-duration), border-color var(--transition-duration);
-}
-
-body.dark-mode #repos div {
-    color: var(--text-dark);
-    border: 1px solid var(--text-dark);
-}
-
-#repos h3 {
-    margin: 0;
-}
-
-#repos p {
-    margin: 5px 0 0;
-}
-
-.repo-details {
-    display: flex;
-    justify-content: space-between;
-    margin-top: 10px;
-}
-
-.repo-language {
-    text-align: left;
-}
-
-.repo-stars {
-    text-align: right;
-}
-
-footer {
-    background-color: var(--background-light);
-    color: var(--text-light);
-    padding: 20px 0;
-    text-align: center;
-    margin-top: auto;
-    width: 100%;
-    transition: background-color var(--transition-duration), color var(--transition-duration);
-}
-
-body.dark-mode footer {
-    background-color: var(--background-dark);
-    color: var(--text-dark);
-}
-
-.social-badges {
-    display: flex;
-    justify-content: center;
-    gap: 10px;
-}
-
-.social-badges img {
-    height: 30px;
+/* Add a color to the active/current link */
+.topnav a.active {
+  background-color: #04AA6D;
+  color: white;
 }
