@@ -1,43 +1,45 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Personal Webpage of ThompsonA93">
-    <meta name="keywords" content="\
-    Softwareentwicklung, Webentwicklung, IT Service, IT Consulting,\
-    Software development, web development, IT services,\
-    Österreich, Kärnten, Klagenfurt,\
-    Austria, Carinthia\
-    ">   
-    <title>Tom's Hütte</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" href="/image/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="/image/favicon.svg" />
+    <link rel="shortcut icon" href="/image/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/image/apple-touch-icon.png" />
+    <meta name="apple-mobile-web-app-title" content="MyWebSite" />
+    <link rel="manifest" href="/image/site.webmanifest" />
+    <title>ThompsonA93</title>
+    <link rel="stylesheet" href="css\style.css">
+    <link rel="stylesheet" href="css\header.css">
 </head>
 
-
-<body>
+<body onload="loadPage('html/home.html')">
     <header>
-        <nav class="navbar">
+        <nav>
+            <a href="#">
+                <h1>Thompson A.</h1>
+            </a>
             <ul>
-                <li><a href="#" onclick="loadPage('src/about.html')">About</a></li>
-                <li><a href="#" onclick="loadPage('src/projects.html')">Projects</a></li>
-                <li><a href="#" onclick="loadPage('src/contact.html')">Contact</a></li>
+                <li><a href="#" onclick="loadPage('html/home.html')">Home</a></li>
+                <li><a href="#" onclick="loadPage('html/profile.html')">Profile</a></li>
+                <li><a href="#" onclick="loadPage('html/projects.html')">Projects</a></li>
+                <li><a href="#" onclick="loadPage('html/hobbies.html')">Hobbies</a></li>
             </ul>
         </nav>
     </header>
 
-
     <main id="content">
-        asdf
     </main>
 
 
-<script src="script.js"></script>
+
+
+    <script src="js\loadPage.js"></script>
+    <script src="js\fetchGithubData.js"></script>
+
 </body>
-
-
 
 </html>
