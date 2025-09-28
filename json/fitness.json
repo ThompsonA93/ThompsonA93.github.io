@@ -1,0 +1,19 @@
+{
+  "motivation": "Personal achievements",
+  "activities": [ "Running", "Cycling", "Hiking", "Weightlifting", "Bouldern"  ],
+  "max_lifts": {
+    "weight_class": "-93 kg",
+    "squat": "150 kg",
+    "bench_press": "100 kg",
+    "deadlift": "160 kg",
+    "overhead_press": "72,5 kg",
+    "rows": "100kg"
+  },
+  "fastest_runs": {
+    "1k": "00:04:29",
+    "5k": "00:25:42",
+    "10k": "00:52:36",
+    "21k": "2:33:08"
+  },
+  "longest_run": " 21,42 km"
+}

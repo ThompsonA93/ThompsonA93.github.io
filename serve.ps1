@@ -1,1 +1,1 @@
-npx live-server
+npx live-server --no-css-inject

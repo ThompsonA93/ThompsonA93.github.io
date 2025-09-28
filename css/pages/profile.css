@@ -1,0 +1,163 @@
+/*
+|--------------------------------------------------------------------------
+| PROFILE CONTAINER & TITLES
+|--------------------------------------------------------------------------
+*/
+.profile {
+    max-width: 800px;
+    margin: 4rem auto;
+    padding: 2rem;
+}
+
+.profile__title {
+    color: var(--color-primary-dark);
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+
+    border-bottom: 2px solid var(--color-border);
+    padding-bottom: 0.5rem;
+}
+
+.profile__bio p {
+    color: var(--color-text-medium);
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+}
+
+.profile__skills-title {
+
+    color: var(--color-primary);
+    font-size: 1.8rem;
+    margin-top: 3rem;
+    margin-bottom: 1rem;
+}
+
+/*
+|--------------------------------------------------------------------------
+| SKILL LIST (DETAILS/SUMMARY)
+|--------------------------------------------------------------------------
+*/
+.profile__skills-list {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    gap: 1rem 1rem;
+}
+
+.profile__skills-item {
+
+    width: 100%;
+}
+
+
+.profile__skill-header {
+
+    background-color: var(--color-surface);
+
+    color: var(--color-text-high);
+    padding: 0.8rem 1rem;
+
+    border: 2px solid var(--color-primary);
+    border-radius: 20px;
+    cursor: pointer;
+    margin-bottom: 0.5rem;
+    list-style: none;
+    display: flex;
+    align-items: center;
+}
+
+
+.profile__skill-header::marker,
+.profile__skill-header::-webkit-details-marker {
+    display: none;
+    content: "";
+}
+
+
+.profile__skill-header:before {
+    content: '+';
+    font-weight: bold;
+    font-size: 1.2rem;
+    min-width: 1.5rem;
+    margin-right: 0.5rem;
+    text-align: center;
+    transition: transform 0.2s ease-out;
+}
+
+
+.profile__skill-details[open] .profile__skill-header:before {
+    transform: rotate(45deg);
+}
+
+/*
+|--------------------------------------------------------------------------
+| DETAIL CONTENT & TEXT
+|--------------------------------------------------------------------------
+*/
+.profile__skill-detail-content {
+
+    margin-left: 1.75rem;
+    border-left: 2px solid var(--color-primary);
+    padding: 0.5rem 1.5rem 1rem 1rem;
+    margin-top: -0.5rem;
+}
+
+.profile__skill-detail-content p {
+
+    color: var(--color-text-medium);
+}
+
+
+/*
+|--------------------------------------------------------------------------
+| TECH BADGES
+|--------------------------------------------------------------------------
+*/
+.profile__tech-badges {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+}
+
+.profile__tech-badges a {
+    text-decoration: none;
+    transition: transform 0.2s ease;
+}
+
+.profile__tech-badges a:hover {
+    transform: translateY(-2px);
+}
+
+.profile__tech-badges img {
+    display: block;
+
+    filter: brightness(1.1);
+}
+
+/*
+|--------------------------------------------------------------------------
+| SOCIAL LINKS
+|--------------------------------------------------------------------------
+*/
+.profile__social-links {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    align-items: center;
+    margin-top: 2rem;
+}
+
+.profile__social-icon {
+    width: 28px;
+    height: 28px;
+    fill: var(--color-primary);
+    transition: fill 0.3s;
+}
+
+.profile__social-link:hover .profile__social-icon {
+    fill: var(--color-primary-dark);
+}

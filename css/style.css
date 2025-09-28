@@ -1,0 +1,10 @@
+@import url("./properties.css"); 
+@import url("./base.css"); 
+
+@import url("./components/header.css");
+@import url("./components/map.css");
+
+@import url("./pages/hobbies.css");
+@import url("./pages/home.css");
+@import url("./pages/profile.css");
+@import url("./pages/projects.css");

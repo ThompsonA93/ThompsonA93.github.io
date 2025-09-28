@@ -1,0 +1,86 @@
+[
+  {
+    "name": "Batumi, Georgia",
+    "location": [41.6423, 41.6339],
+    "images": ["/images/batumi-1.jpg"],
+    "notes": "A beautiful coastal city on the Black Sea."
+  },
+  {
+    "name": "Kutaisi, Georgia",
+    "location": [42.2679, 42.6946],
+    "images": ["/images/kutaisi-1.jpg"],
+    "notes": "Explored the rich history and monasteries of the region."
+  },
+  {
+    "name": "Nur-Sultan, Kazakhstan",
+    "location": [51.1333, 71.4333],
+    "images": ["/images/nursultan-1.jpg", "/images/nursultan-2.jpg"],
+    "notes": "The futuristic architecture was incredible to see."
+  },
+  {
+    "name": "Yakutsk, Russia",
+    "location": [62.0300, 129.7331],
+    "images": ["/images/yakutsk-1.jpg"],
+    "notes": "Experienced the legendary cold of the world's coldest major city."
+  },
+  {
+    "name": "Tokyo, Japan",
+    "location": [35.6895, 139.6917],
+    "images": ["/images/tokyo-1.jpg", "/images/tokyo-2.jpg"],
+    "notes": "The energy of Shibuya crossing was unforgettable!"
+  },
+  {
+    "name": "Budapest, Hungary",
+    "location": [47.4979, 19.0402],
+    "images": ["/images/budapest-1.jpg"],
+    "notes": "Relaxing in the thermal baths after exploring the Danube."
+  },
+  {
+    "name": "Düsseldorf, Germany",
+    "location": [51.2277, 6.7735],
+    "images": ["/images/dusseldorf-1.jpg"],
+    "notes": "Enjoyed the Altstadt and the modern media harbor."
+  },
+  {
+    "name": "Ljubljana, Slovenia",
+    "location": [46.0569, 14.5058],
+    "images": ["/images/ljubljana-1.jpg"],
+    "notes": "The beautiful Dragon Bridge and castle offered stunning views."
+  },
+  {
+    "name": "Istanbul, Turkey",
+    "location": [41.0082, 28.9784],
+    "images": ["/images/istanbul-1.jpg", "/images/istanbul-2.jpg"],
+    "notes": "A fascinating city where East meets West."
+  },
+  {
+    "name": "Antalya, Turkey",
+    "location": [36.8969, 30.7132],
+    "images": ["/images/antalya-1.jpg"],
+    "notes": "Relaxed by the beautiful Mediterranean coast."
+  },
+  {
+    "name": "Lourdes, France",
+    "location": [43.0914, -0.0457],
+    "images": ["/images/lourdes-1.jpg"],
+    "notes": "A spiritual and historic town in the foothills of the Pyrenees."
+  },
+  {
+    "name": "Monaco, Monaco",
+    "location": [43.7383, 7.4244],
+    "images": ["/images/monaco-1.jpg", "/images/monaco-2.jpg"],
+    "notes": "The beautiful views of the Mediterranean and the famous Formula 1 circuit."
+  },
+    {
+    "name": "Klagenfurt, Austria",
+    "location": [46.6247, 14.3053],
+    "images": ["/images/klagenfurt-1.jpg"],
+    "notes": "Enjoyed the beautiful Wörthersee lake and the Renaissance architecture."
+  },
+  {
+    "name": "Vienna, Austria",
+    "location": [48.2082, 16.3738],
+    "images": ["/images/vienna-1.jpg", "/images/vienna-2.jpg"],
+    "notes": "Explored the imperial palaces and experienced the city's musical heritage."
+  }
+]

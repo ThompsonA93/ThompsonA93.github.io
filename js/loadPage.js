@@ -1,10 +1,24 @@
-function loadPage(page) {
+import { displayBookData } from "./modules/books.js";
+import { displayFitnessData } from "./modules/fitness.js";
+import { displayGithubRepositories } from "./modules/github.js";
+import { displayJourneyMap } from "./modules/journeys.js";
+
+const componentMap = {
+    'github-repositories': displayGithubRepositories,
+    'fitness-data': displayFitnessData,
+    'book-data': displayBookData,
+    'map-container': displayJourneyMap
+};
+
+export function loadPage(page) {
     fetch(page)
         .then(response => response.text())
         .then(data => {
             document.getElementById('content').innerHTML = data;
-            if(document.getElementById('github-repositories')){
-                displayGithubRepositories();
+            for (const containerId in componentMap) {
+                if (document.getElementById(containerId)) {
+                    componentMap[containerId]();
+                }
             }
         })
         .catch(error => {

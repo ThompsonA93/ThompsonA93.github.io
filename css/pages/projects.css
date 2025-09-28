@@ -1,0 +1,105 @@
+/* Container for all repositories */
+#github-repositories {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+/* The box/card for each individual repository */
+.repository-item {
+    background-color: var(--color-surface);
+    padding: 1.5rem;
+    border-radius: 8px;
+    border: 1px solid var(--color-border);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.repository-item:hover {
+    transform: translateY(-5px); /* Subtle lift on hover */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Repository Title (h3) */
+.repository-item h3 {
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid var(--color-border-subtle);
+    font-size: 1.4rem;
+    display: flex;
+    justify-content: space-between; /* Space out the title and date */
+    align-items: center;
+}
+
+.repository-item h3 a {
+    color: var(--color-primary); /* Use a vibrant color for the link */
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.repository-item h3 a:hover {
+    color: var(--color-primary-dark);
+}
+
+/* Title Span (Latest Update Date) */
+.repository-item h3 span {
+    font-size: 0.9rem;
+    color: var(--color-text-medium);
+    font-weight: normal;
+}
+
+/* Description (p) */
+.repository-item p {
+    color: var(--color-text-medium);
+    margin-bottom: 1rem;
+}
+
+/* Details (Language and Stars) */
+.repo-details {
+    display: flex;
+    justify-content: space-between; /* This handles the spacing */
+    font-size: 0.9rem;
+    color: var(--color-text-medium);
+}
+
+
+
+
+
+
+
+#pagination-controls { /* Changed from .pagination to #pagination-controls */
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+    margin-top: 3rem;
+}
+
+#pagination-controls button { /* Changed from .pagination button */
+    background-color: var(--color-surface);
+    color: var(--color-text-high);
+    border: 2px solid var(--color-primary);
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.2s, color 0.2s;
+    font-weight: bold;
+}
+
+#pagination-controls button:hover:not(:disabled):not(.active) { /* Changed from .pagination button */
+    background-color: var(--color-primary-subtle);
+    color: var(--color-text-high);
+}
+
+#pagination-controls button.active { /* Changed from .pagination button */
+    background-color: var(--color-primary);
+    color: var(--color-background);
+    border-color: var(--color-primary);
+    pointer-events: none;
+}
+
+#pagination-controls button:disabled { /* Changed from .pagination button */
+    opacity: 0.4;
+    cursor: not-allowed;
+}

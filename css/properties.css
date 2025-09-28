@@ -1,0 +1,65 @@
+@property --color-primary {
+  syntax: '<color>';
+  initial-value: #FF7E00; /* Vibrant Orange */
+  inherits: true;
+}
+@property --color-primary-light {
+  syntax: '<color>';
+  initial-value: #FFAA4B; /* Lighter Orange */
+  inherits: true;
+}
+@property --color-primary-dark {
+  syntax: '<color>';
+  initial-value: #CC6500; /* Deeper Orange */
+  inherits: true;
+}
+
+
+
+
+
+
+@property --color-background {
+  syntax: '<color>';
+  initial-value: #0A0A0A; /* Deepest black for background */
+  inherits: true;
+}
+
+@property --color-surface {
+  syntax: '<color>';
+  initial-value: #1B1B1B; /* Cards, Boxes */
+  inherits: true;
+}
+@property --color-border {
+  syntax: '<color>';
+  initial-value: #282828; /* Soft, low-contrast border */
+  inherits: true;
+}
+
+
+
+
+@property --color-text-high {
+  syntax: '<color>';
+  initial-value: #F0F0F0; /* Headings/Important text */
+  inherits: true;
+}
+@property --color-text-medium {
+  syntax: '<color>';
+  initial-value: #B0B0B0; /* Body text */
+  inherits: true;
+}
+@property --color-text-low {
+  syntax: '<color>';
+  initial-value: #757575; /* Subtle text */
+  inherits: true;
+}
+
+
+
+
+
+:root {
+  --node-rgb: #FFAA4B;
+  --edge-rgb: #FFAA4B;
+}

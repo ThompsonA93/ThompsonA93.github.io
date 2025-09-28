@@ -1,0 +1,47 @@
+/* Universal selector remains the same */
+*, *::before, *::after {
+    box-sizing: border-box; /* Technical Term: Ensures padding and border are included inside the element's total width and height. */
+}
+
+/* Content wrapper remains the same */
+#content {
+    max-width: 1000px;
+    margin: 2rem auto;
+    padding: 0 2rem;
+    
+    /* Optional: Set the base text color for the entire content area */
+    color: var(--color-text-medium); 
+}
+
+/* Site background canvas fix */
+.site-background-canvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1; 
+    display: block; 
+    
+    /* 🌟 REFACTOR: Use the deepest background color 🌟 */
+    background-color: var(--color-background); 
+}
+
+/* Define the animation sequence (remains the same as variables aren't used here) */
+@keyframes subtleShift {
+    0% {
+        background-position: 0% 50%;
+    }
+    100% {
+        background-position: 100% 50%;
+    }
+}
+
+
+/* Media query remains the same */
+@media screen and (max-width: 600px) {
+    #content {
+        padding: 0 1rem;
+        margin-top: 1rem; 
+    }
+}
