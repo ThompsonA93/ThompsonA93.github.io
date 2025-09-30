@@ -57,8 +57,8 @@ async function fetchBookData() {
 
 async function fetchBookByISBN(isbn) {
     const apiUrl = `https://openlibrary.org/api/books?bibkeys=ISBN:${isbn}&format=json&jscmd=data`;
-    const isbnKey = `ISBN:${isbn}`; // The key under which the book data is stored
-
+    const isbnKey = `ISBN:${isbn}`; 
+    
     try {
         const response = await fetch(apiUrl);
         if (!response.ok) {
@@ -67,7 +67,6 @@ async function fetchBookByISBN(isbn) {
         }
         
         const data = await response.json();
-        
         if (data && data[isbnKey]) {
             const bookData = data[isbnKey];
 
@@ -75,10 +74,12 @@ async function fetchBookByISBN(isbn) {
                 title: bookData.title,
                 authors: bookData.authors ? bookData.authors.map(author => author.name) : ['N/A'],
                 imageLinks: {
-                    thumbnail: bookData.cover ? bookData.cover.large : null 
+                    thumbnail: bookData.cover ? bookData.cover.medium : null 
                 },
+                url: bookData.url ? bookData.url : null,
                 notes: '' 
             };
+            
             return mappedData;
         } else {
             console.warn(`Book not found for ISBN: ${isbn}`);
@@ -94,18 +95,22 @@ async function fetchBookByISBN(isbn) {
 
 async function renderBooks() {
     const booksContainer = document.getElementById('book-data');
-    booksContainer.innerHTML = ''; // Clear container
+    booksContainer.innerHTML = ''; 
 
     booksState.book_data.forEach(book => {
         const bookElement = document.createElement('div');
+        bookElement.classList.add('books__item'); 
+
         const authorNames = book.authors ? book.authors.join(', ') : 'Unknown Author';
-        const imageUrl = book.imageLinks?.thumbnail || 'placeholder.png'; // Use a placeholder if needed
+        const imageUrl = book.imageLinks?.thumbnail || 'placeholder.png'; 
         
         bookElement.innerHTML = `
-            <h3>${book.title || 'Untitled'}</h3>
-            <p>Author: ${authorNames}</p>
-            <p>${book.notes}</p>
-            <img src="${imageUrl}" alt="${book.title} Cover">
+        <div class="books__item-text">
+            <h3 class="books__item-header"><a href="${book.url}">${book.title || 'Untitled'}</a></h3>
+            <p class="books__item-author">Author: ${authorNames}</p>
+            <p class="books__item-notes">${book.notes}</p>
+        </div>
+        <img class="books_item-image" src="${imageUrl}" alt="${book.title} Cover">
         `;
         booksContainer.appendChild(bookElement);
     });

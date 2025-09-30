@@ -1,0 +1,53 @@
+.fitness__container {
+    display: flex; 
+    align-items: flex-start;
+    gap: 20px;
+    padding: 20px;
+    border: 1px solid var(--color-border); 
+    border-radius: 8px;
+    background-color: var(--color-background); 
+}
+
+.fitness__dataset {
+    flex: 1;
+    background-color: var(--color-surface);
+    border-radius: 8px;
+    padding: 0px 20px 20px 20px;
+}
+
+.fitness__dataset-detail {
+    color: var(--color-primary);
+}
+
+.fitness__dataset-value {
+    color: var(--color-text-medium);
+    padding: 1rem;
+}
+
+.fitness__list{
+    list-style: none;
+    padding-left: 1rem; 
+    margin-top: 0;
+    margin-bottom: 0; 
+}
+
+
+.fitness__table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.fitness__table-cell {
+    width: 49%;
+    padding: 0px 10px 0px 10px;
+}
+
+.fitness__table-cell--label {
+    color: var(--color-text-medium);
+    text-align: right;
+}
+
+.fitness__table-cell--value {
+    color: var(--color-primary-light);
+    text-align: left;
+}

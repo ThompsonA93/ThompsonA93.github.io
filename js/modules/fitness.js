@@ -2,10 +2,11 @@ const fitnessData = {
     data: null
 }
 
-const fitnessContainer = document.getElementById('fitness-data')
-
 export async function displayFitnessData() {
-    await fetchFitnessData();
+    if(fitnessData.data == null){
+        await fetchFitnessData();
+    }
+
     renderFitnessData();
 }
 
@@ -26,6 +27,9 @@ async function fetchFitnessData() {
     }
 }
 
+
+
+
 function renderFitnessData() {
     const fitnessContainer = document.getElementById('fitness-data')
 
@@ -34,41 +38,73 @@ function renderFitnessData() {
     }
 
     const data = fitnessData.data;
-    const activitiesList = data.activities.map(activity => `<li>${activity}</li>`).join('');
-    const liftsList = Object.keys(data.max_lifts).map(key => {
+
+    // 1. Activities List (Remains as a standard list)
+    const activitiesList = data.activities.map(activity => 
+        `<li class="fitness__list-item">${activity}</li>`
+    ).join('');
+
+    // 2. Lifts Table Rows (New Structure)
+    const liftsTableBody = Object.keys(data.max_lifts).map(key => {
         if (key !== 'weight_class') {
-            return `<li><strong>${key.replace('_', ' ')}:</strong> ${data.max_lifts[key]}</li>`;
+            let exercise = key.replace('_', ' ');
+            // Capitalize the first letter of the exercise name
+            let capitalizedExercise = exercise.charAt(0).toUpperCase() + exercise.slice(1);
+            
+            // Return a table row <tr> with two data cells <td>
+            return `
+                <tr class="fitness__table-row">
+                    <td class="fitness__table-cell fitness__table-cell--label">${capitalizedExercise}</td>
+                    <td class="fitness__table-cell fitness__table-cell--value">${data.max_lifts[key]}</td>
+                </tr>
+            `;
         }
         return '';
     }).join('');
-    const runsList = Object.keys(data.fastest_runs).map(key => {
-        return `<li><strong>${key}:</strong> ${data.fastest_runs[key]}</li>`;
+
+    // 3. Runs Table Rows (New Structure)
+    const runsTableBody = Object.keys(data.fastest_runs).map(key => {
+        // Return a table row <tr> with two data cells <td>
+        return `
+            <tr class="fitness__table-row">
+                <td class="fitness__table-cell fitness__table-cell--label">${key}</td>
+                <td class="fitness__table-cell fitness__table-cell--value">${data.fastest_runs[key]}</td>
+            </tr>
+        `;
     }).join('');
 
-    const fitnessElement = document.createElement('div');
-    fitnessElement.innerHTML = `
-    <dl class="fitness-data">
-        <dt>Motivation</dt>
-        <dd>${data.motivation}</dd>
+    // Clear and set innerHTML
+    fitnessContainer.innerHTML = '';
+    fitnessContainer.innerHTML = `
+<div class="fitness__dataset">
 
-        <dt>Activities</dt>
-        <dd><ul>${activitiesList}</ul></dd>
+    <p class="fitness__dataset-detail">Motivation:</p>
+    <span class="fitness__dataset-value">${data.motivation}</span>
 
-        <dt>Max Lifts</dt>
-        <dd>
-            <p>Weight Class: <span>${data.max_lifts.weight_class}</span></p>
-            <ul>${liftsList}</ul>
-        </dd>
+    <p class="fitness__dataset-detail">Activities:</p>
+    <ul class="fitness__list">${activitiesList}</ul>   
 
-        <dt>Fastest Runs</dt>
-        <dd><ul>${runsList}</ul></dd>
+    <p class="fitness__dataset-detail">Weight category:</p>
+    <span class="fitness__dataset-value">${data.max_lifts.weight_class}</span>
+    
+    <p class="fitness__dataset-detail">Longest Run:</p>
+    <span class="fitness__dataset-value">${data.longest_run}</span>
+</div>
 
-        <dt>Longest Run</dt>
-        <dd>${data.longest_run}</dd>
-    </dl>
-        `;
-
-    fitnessContainer.innerHTML = ''
-    fitnessContainer.appendChild(fitnessElement);
-
+<div class="fitness__dataset">
+    <p class="fitness__dataset-detail">Weight training</p>
+    <table class="fitness__table">
+        <tbody class="fitness__table-body">
+            ${liftsTableBody}
+        </tbody>
+    </table>
+    
+    <p class="fitness__dataset-detail">Running</p>
+    <table class="fitness__table">
+        <tbody class="fitness__table-body">
+            ${runsTableBody}
+        </tbody>
+    </table>
+</div>
+    `;
 }

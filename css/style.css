@@ -2,7 +2,9 @@
 @import url("./base.css"); 
 
 @import url("./components/header.css");
+@import url("./components/fitness.css");
 @import url("./components/map.css");
+@import url("./components/books.css");
 
 @import url("./pages/hobbies.css");
 @import url("./pages/home.css");

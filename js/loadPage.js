@@ -4,10 +4,10 @@ import { displayGithubRepositories } from "./modules/github.js";
 import { displayJourneyMap } from "./modules/journeys.js";
 
 const componentMap = {
-    'github-repositories': displayGithubRepositories,
+    'github-data': displayGithubRepositories,
     'fitness-data': displayFitnessData,
     'book-data': displayBookData,
-    'map-container': displayJourneyMap
+    'map-data': displayJourneyMap
 };
 
 export function loadPage(page) {

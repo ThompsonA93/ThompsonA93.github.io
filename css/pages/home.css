@@ -1,13 +1,11 @@
 .home__title {
     text-align: center;
-    /* Optional: Use a high-contrast color for the main title */
     color: var(--color-text-high); 
 }
 
 .home__info {
     text-align: center;
     margin-bottom: 2rem; 
-    /* Optional: Use a medium-contrast color for body/info text */
     color: var(--color-text-medium); 
 }
 
@@ -27,16 +25,11 @@
     text-decoration: none;
     font-weight: bold;
     
-    /* 🌟 REFACTOR: Primary color remains the accent background 🌟 */
     background-color: var(--color-primary);
-    
-    /* 🌟 REFACTOR: Use the high-contrast text color for text on the primary background 🌟 */
     color: var(--color-text-high); 
-        
     transition: background-color 0.3s;
 }
 
 .home__list-link:hover {
-    /* 🌟 REFACTOR: Primary-dark remains the darker shade for the hover effect 🌟 */
     background-color: var(--color-primary-dark);
 }

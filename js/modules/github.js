@@ -4,7 +4,7 @@ const repositoryData = {
     reposPerPage: 5,
 };
 
-const repoContainer = document.getElementById('github-repositories');
+const repoContainer = document.getElementById('github-data');
 const paginationContainer = document.getElementById('pagination-controls');
 
 export async function displayGithubRepositories() {
@@ -57,7 +57,7 @@ async function fetchGithubData() {
 }
 
 function renderRepositories() {
-    const repoContainer = document.getElementById('github-repositories');
+    const repoContainer = document.getElementById('github-data');
     repoContainer.innerHTML = '';
 
     const startIndex = (repositoryData.currentPage - 1) * repositoryData.reposPerPage;

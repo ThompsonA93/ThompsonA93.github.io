@@ -4,11 +4,7 @@
     z-index: 100;
     background-color: var(--color-surface); 
     
-    
-    
     box-shadow: 0 2px 4px rgba(0,0,0,0.5); 
-    
-    
 }
 
 .header__nav {
