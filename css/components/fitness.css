@@ -2,7 +2,7 @@
     display: flex; 
     align-items: flex-start;
     gap: 20px;
-    height: 350px;
+    height: 330px;
 }
 
 .fitness__dataset {

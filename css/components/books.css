@@ -1,14 +1,13 @@
 .books__container {
-    display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 1rem;
-    padding: 1rem;
+
 }
 
 .books__item {
     background-color: var(--color-surface);
     border: solid 1px ;
     border-radius: 8px;
+
+    margin-top:1rem;
 
     display: flex;
     align-items: flex-start;
