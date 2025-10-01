@@ -1,8 +1,6 @@
 .hobby__header {
     color: var(--color-primary-dark);
     font-size: 2.5rem;
-    margin-bottom: 2rem;
-
     border-bottom: 2px solid var(--color-border);
     padding-bottom: 0.5rem;
 }
@@ -11,6 +9,5 @@
 .hobby__title {
     color: var(--color-primary);
     font-size: 1.8rem;
-    margin-top: 3rem;
     margin-bottom: 1rem;
 }

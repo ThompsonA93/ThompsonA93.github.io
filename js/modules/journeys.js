@@ -57,18 +57,10 @@ function addJourneyMarkers() {
 
         const marker = L.marker([lat, lng]);
 
-
-        const imageHTML = journey.images.map(imgSrc => 
-            `<img src="${imgSrc}" alt="${journey.name}" style="width: 100px; height: auto; margin-right: 5px; display: inline-block;">`
-        ).join(''); 
-
         const popupContent = `
             <div>
                 <h4>${journey.name}</h4>
                 <p>${journey.notes}</p>
-                <div style="display: flex; overflow-x: auto; padding-bottom: 5px;">
-                    ${imageHTML}
-                </div>
             </div>
         `;
 

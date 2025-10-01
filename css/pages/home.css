@@ -1,12 +1,21 @@
+.home__section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
 .home__title {
     text-align: center;
-    color: var(--color-text-high); 
+    color: var(--color-text-high);
+    width: 900px;
 }
 
 .home__info {
     text-align: center;
-    margin-bottom: 2rem; 
-    color: var(--color-text-medium); 
+    margin-bottom: 2rem;
+    color: var(--color-text-medium);
+    width: 700px;
 }
 
 .home__list {
@@ -15,7 +24,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 2rem; 
+    gap: 2rem;
 }
 
 
@@ -24,9 +33,9 @@
     border-radius: 50px;
     text-decoration: none;
     font-weight: bold;
-    
+
     background-color: var(--color-primary);
-    color: var(--color-text-high); 
+    color: var(--color-text-high);
     transition: background-color 0.3s;
 }
 

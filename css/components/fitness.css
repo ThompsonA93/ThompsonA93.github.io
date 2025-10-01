@@ -2,10 +2,7 @@
     display: flex; 
     align-items: flex-start;
     gap: 20px;
-    padding: 20px;
-    border: 1px solid var(--color-border); 
-    border-radius: 8px;
-    background-color: var(--color-background); 
+    height: 350px;
 }
 
 .fitness__dataset {
@@ -13,6 +10,7 @@
     background-color: var(--color-surface);
     border-radius: 8px;
     padding: 0px 20px 20px 20px;
+    height: 100%;
 }
 
 .fitness__dataset-detail {
