@@ -1,0 +1,26 @@
+{
+  "client": "Universität Klagenfurt",
+  "period": "Sommersemester 2025",
+  "course_data": {
+    "type": "Practical Course",
+    "enrolled_students": 15,
+    "feedback_rating": 1.6,
+    "participation": {
+      "count": 7,
+      "quote": "47%"
+    },
+    "assessment_summary": [
+      "Although it is a challenging topic, the lecture notes in addition with the course assignments guide through the topic.",
+      "Nice course. The only issue for me was the fact that we build on top of already created MicroJava compiler rather than creating something new.",
+      "The Lecturer is very good, he is quite clear, very helpful and answers all the questions. Drawback: The book (in English) was given very late in the semester; main source was slides (not always clear) and Internet.",
+      "Cool course and cool teacher.",
+      "I have a rather positive assessment of the course as it covered an in-depth understanding of the topic (compilers) compared to other courses at AAU. A lot of hands-on and practical assignments were also nice. Drawback: Reference book was in German, and English translation only came out in June (less than a month before the exam) for an English program course.",
+      "The Lecturer did a great job creating and maintaining a positive atmosphere.",
+      "Topic was good.",
+      "Interactive lecture. The Lecturer paid attention to our progress and engaged to explain every question.",
+      "The Lecturer is very nice and explains things in detail.",
+      "Although course is built on MicroJava (rather abstract), it helps to understand the real Java bytecode better and provides enough training to obtain skills to build own compiler or compiler-like task.",
+      "Practical assignments every week that helped understand concepts; group work and presentation of assignments was good."
+    ]
+  }
+}
