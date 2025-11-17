@@ -1,7 +1,8 @@
 {
   "client": "Universität Klagenfurt",
-  "period": "Sommersemester 2025",
+  "year": "2025",
   "course_data": {
+    "name": "Compiler construction",
     "type": "Practical Course",
     "enrolled_students": 15,
     "feedback_rating": 1.6,
