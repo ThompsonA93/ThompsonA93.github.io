@@ -15,10 +15,6 @@
 }
 
 
-
-
-
-
 @property --color-background {
   syntax: '<color>';
   initial-value: #0A0A0A; 
@@ -36,9 +32,6 @@
   inherits: true;
 }
 
-
-
-
 @property --color-text-high {
   syntax: '<color>';
   initial-value: #F0F0F0; 
@@ -54,10 +47,6 @@
   initial-value: #757575; 
   inherits: true;
 }
-
-
-
-
 
 :root {
   --node-rgb: #FFAA4B;

@@ -1,27 +1,71 @@
 {
-  "client": "Universität Klagenfurt",
-  "year": "2025",
-  "course_data": {
-    "name": "Compiler construction",
-    "type": "Practical Course",
-    "enrolled_students": 15,
-    "feedback_rating": 1.6,
-    "participation": {
-      "count": 7,
-      "quote": "47%"
-    },
-    "assessment_summary": [
-      "Although it is a challenging topic, the lecture notes in addition with the course assignments guide through the topic.",
-      "Nice course. The only issue for me was the fact that we build on top of already created MicroJava compiler rather than creating something new.",
-      "The Lecturer is very good, he is quite clear, very helpful and answers all the questions. Drawback: The book (in English) was given very late in the semester; main source was slides (not always clear) and Internet.",
-      "Cool course and cool teacher.",
-      "I have a rather positive assessment of the course as it covered an in-depth understanding of the topic (compilers) compared to other courses at AAU. A lot of hands-on and practical assignments were also nice. Drawback: Reference book was in German, and English translation only came out in June (less than a month before the exam) for an English program course.",
-      "The Lecturer did a great job creating and maintaining a positive atmosphere.",
-      "Topic was good.",
-      "Interactive lecture. The Lecturer paid attention to our progress and engaged to explain every question.",
-      "The Lecturer is very nice and explains things in detail.",
-      "Although course is built on MicroJava (rather abstract), it helps to understand the real Java bytecode better and provides enough training to obtain skills to build own compiler or compiler-like task.",
-      "Practical assignments every week that helped understand concepts; group work and presentation of assignments was good."
+  "university_reports": {
+    "client": "Universität Klagenfurt",
+    "year": "2025",
+    "courses": [
+      {
+        "name": "Compiler construction",
+        "type": "Practical Course",
+        "enrolled_students": 15,
+        "feedback_rating": 1.6,
+        "participation": {
+          "count": 7,
+          "quote": "47%"
+        },
+        "assessment_summary": [
+          "Although it is a challenging topic, the lecture notes in addition with the course assignments guide through the topic.",
+          "Nice course. The only issue for me was the fact that we build on top of already created MicroJava compiler rather than creating something new.",
+          "The Lecturer is very good, he is quite clear, very helpful and answers all the questions. Drawback: The book (in English) was given very late in the semester; main source was slides (not always clear) and Internet.",
+          "Cool course and cool teacher.",
+          "I have a rather positive assessment of the course as it covered an in-depth understanding of the topic (compilers) compared to other courses. A lot of hands-on and practical assignments were also nice. Drawback: Reference book was in German, and English translation only came out in June (less than a month before the exam) for an English program course.",
+          "The Lecturer did a great job creating and maintaining a positive atmosphere.",
+          "Topic was good.",
+          "Interactive lecture. The Lecturer paid attention to our progress and engaged to explain every question.",
+          "The Lecturer is very nice and explains things in detail.",
+          "Although course is built on MicroJava (rather abstract), it helps to understand the real Java bytecode better and provides enough training to obtain skills to build own compiler or compiler-like task.",
+          "Practical assignments every week that helped understand concepts; group work and presentation of assignments was good."
+        ]
+      },
+      {
+        "name": "Einführung in die strukturierte und objektbasierte Programmierung mit Java",
+        "type": "Praktischer Kurs",
+        "enrolled_students": 26,
+        "feedback_rating": 1.22,
+        "participation": {
+          "count": 9,
+          "quote": "34,6%"
+        },
+        "assessment_summary": [
+          "Es wird immer wieder gewisse Sachen wiederholt, sodass sie nicht in Vergessenheit geraten und unverständliche Sachen werden schnell und einfach aufgeklärt.",
+          "Die Aufgaben und Arbeitsblätter.",
+          "Der Lektor ist sehr bemüht, erklärt alles detailliert und grundlegend, definitiv zu empfehlen.",
+          "Der Austausch zwischen Lehrperson und Studierenden; Das Vorprogrammieren der Aufgaben durch Anweisungen der Studierenden und echtzeit verbesserungen waren super. Zusätzlich hat die Lehrperson zusätzliche Sachen rund ums programmieren beigebracht und komplexere Prozesse wie Rekursionen, Klassen etc. visuell dargestellt was immens geholfen hat; ist generell sehr talentiert darin Sachen beizubringen!",
+          "Zusammenarbeit und dass man Online mitmachen kann, wenn man nicht persönlich am Unterricht teilnehmen kann",
+          "Dass der Professor die Aufgaben gemeinsam mit den Studierenden gelöst hat und diese verständlich anhand von anderen Hilfsmittel erklärt hat (z.B. mit Excalidraw), weiters wird auf die arbeitenden Studenten Rücksicht genommen (z.B. mittels onlineClassroom);"
+        ]
+      },
+      {
+        "name": "Software Engineering I",
+        "type": "Praktischer Kurs",
+        "enrolled_students": 23,
+        "feedback_rating": 1.73,
+        "participation": {
+          "count": 12,
+          "quote": "52,2 %"
+        },
+        "assessment_summary": [
+          "Fragen werden detailiert beantwortet. Freiwillge Meldungen für Präsentationen erhöhen die Qualität der Präsentationen.",
+          "Die Lehrperson, Mockito",
+          "Der Vortragende war sehr cool",
+          "Es wurde sich Zeit genommen, Fragen wurden gut beantwortet",
+          "Bessere Folien, Bessere Erklärungen, mehr Zeit für Folien und Hilfen",
+          "Mehrere Beispiele zur Code Rekonstruktion wären interessant gewesen.",
+          "Übung braucht häufig sehr lange, mehr versuchen nicht zu lang irgendwo stecken zu bleiben.",
+          "Stoff zu dem nächsten Übungsblatt könnte kurz in der aktuellen Einheit erklärt und passende Beispiele gezeigt werden",
+          "Weniger nervige 'sinnlose' Arbeitsblätter. Die Graphen waren zu viel. Man hat quasi nur gelernt, wie man Graphen zeichnent, aber wirkliche Programmierkenntnisse hat man keine bekommen. Man hat quasi nie software 'engineered'. Mehr Zeit zum hochladen der Aufgabe.",
+          "Bessere Erklärung um die Übungsblätter zu lösen da die VO Folien oft nicht ausreichten. Die Kreuzeliste hätte man wenigstens bis Montag offen lassen können, da die erste Gruppe sowieso erst am Dienstag war",
+        ]
+      }
     ]
   }
 }
